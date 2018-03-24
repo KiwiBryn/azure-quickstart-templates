@@ -1,4 +1,4 @@
-Configuration MyService
+Configuration WebServer
 {
     Import-DSCResource -ModuleName PSDesiredStateConfiguration, xNetworking
 	
