@@ -4,6 +4,7 @@
   "parameters": {
     "domainNamePrefix": {
       "type": "string",
+      "defaultValue": "wmssdsctrial",
       "metadata": {
         "description": "The public DNS name label for the service.  The pattern will follow: <domainNamePrefix>.<region>.cloudapp.azure.com"
       }
@@ -24,6 +25,7 @@
     },
     "vmssName": {
       "type": "string",
+      "defaultValue": "wmssdsctrial",
       "metadata": {
         "description": "String used as a base for naming resources (9 characters or less). A hash is prepended to this string for some resources, and resource-specific information is appended."
       },
@@ -39,6 +41,7 @@
     },
     "adminUsername": {
       "type": "string",
+      "defaultValue": "BrynHLewis",
       "metadata": {
         "description": "Admin username on all VMs."
       }
@@ -135,14 +138,15 @@
     },
     "automationRegionId": {
       "type": "string",
-      "defaultValue": "East US 2",
+      "defaultValue": "Australia Southeast",
       "allowedValues": [
         "Japan East",
         "East US 2",
         "West Europe",
         "Southeast Asia",
         "South Central US",
-        "Central India"
+        "Central India",
+        "Australia Southeast"
       ],
       "metadata": {
         "description": "The region the Automation account is located in."
@@ -157,7 +161,7 @@
     },
     "configurationURI": {
       "type": "string",
-      "defaultValue": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/webServer.ps1",
+      "defaultValue": "https://raw.githubusercontent.com/KiwiBryn/azure-quickstart-templates/master/201-vmss-automation-dsc/webServer.ps1",
       "metadata": {
         "description": "The URI for the DSC configuration "
       }
@@ -237,7 +241,7 @@
     "dscModules": {
       "xNetworking": {
         "moduleName": "xNetworking",
-        "moduleUri": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/xNetworking.zip"
+        "moduleUri": "https://raw.githubusercontent.com/KiwiBryn/azure-quickstart-templates/master/201-vmss-automation-dsc/xNetworking.zip"
       }
     },
     "diagnosticsStorageAccountName": "[concat(variables('uniqueStringArray')[0], 'diagsa')]",
@@ -506,7 +510,7 @@
                     }
                   },
                   "settings": {
-                    "ModulesUrl": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.zip",
+                    "ModulesUrl": "https://raw.githubusercontent.com/KiwiBryn/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.zip",
                     "SasToken": "",
                     "ConfigurationFunction": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull",
                     "Properties": [
